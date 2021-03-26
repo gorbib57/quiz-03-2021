@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+
+    <style>
+      button:hover {
+        background-color: #04827d !important;
+        border-color: #04827d !important;
+        #00a19a
+      }
+      button {
+        background-color: #00a19a !important;
+        border-color: #00a19a !important;
+      }
+
+      button:focus {
+        outline: none !important;
+        box-shadow:none !important;
+      }
+
+    </style>
+    <title>Мартовский квиз</title>
+  </head>
+  <body style="background-color: #ecf5f3">
+  	<div class="container-sm text-center my-3">
+  		<img src="images/cover.svg" class="img-fluid rounded mt-2 mb-5" alt="...">
+  		<h1>I ТУР</h1>
+
+  		<h3>Отгадайте к каким мультфильмам и фильмам нарисованы эти афиши?</h3>
+
+		<div class="row align-items-start">
+      <div id="app" class="col-sm">
+          <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div>
+			<div id="app2" class="col-sm">
+	  			<img :src="image.src" class="rounded float-start img-fluid" alt="...">
+	  			<button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+	  	</div>
+			<div id="app3" class="col-sm">
+	  			<img :src="image.src" class="rounded float-start img-fluid" alt="...">
+	  			<button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+	  		</div>	  		
+	  	</div>
+
+      <h3 class="mt-4">Следующее задание тура – ребусы, в которых зашифрованы любимые сказочные герои.</h3>
+      <div class="row align-items-start">
+      <div id="app4" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary mt-2 mb-5">Посмотреть ответ</button>
+      </div> 
+
+      <div id="app5" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary mt-2 mb-5">Посмотреть ответ</button>
+      </div>
+      </div>
+
+      <div class="row align-items-start">
+      <div id="app6" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div>
+
+      <div id="app7" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div>
+      </div>
+
+      <h3 class="mt-4">На фотографиях – детали памятников персонажам мультфильмов, которые сняты по разным сказкам. Назовите персонажа, которому принадлежали эти предметы.</h3>
+      <div class="row align-items-start">
+      <div id="app8" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div> 
+
+      <div id="app9" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div>
+
+      <div id="app10" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div>
+
+      <div id="app11" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary my-2">Посмотреть ответ</button>
+      </div>
+      </div> 
+
+      <h3 class="mt-4">А следующее задание нам помогли составить популярные картинки-эмодзи. Назовите сказку.</h3>  
+
+      <div class="row align-items-start">
+      <div id="app12" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary mt-2 mb-5">Посмотреть ответ</button>
+      </div> 
+
+      <div id="app13" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary mt-2 mb-5">Посмотреть ответ</button>
+      </div>
+      </div>
+      <div class="row align-items-start">
+      <div id="app14" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary mt-2 mb-5">Посмотреть ответ</button>
+      </div>
+
+      <div id="app15" class="col-sm">
+      <img :src="image.src" class="rounded float-start img-fluid" alt="...">
+          <button @click="switchImage" type="button" class="btn btn-primary mt-2 mb-5">Посмотреть ответ</button>
+      </div>
+      </div>
+
+    <!-- +++++++++++++++++++++++++++ -->  
+    <img style="display: none" src="images/1/1a.jpg">
+    <img style="display: none" src="images/1/2a.jpg">
+    <img style="display: none" src="images/1/3a.jpg">
+    <img style="display: none" src="images/2/1a.jpg">
+    <img style="display: none" src="images/2/2a.jpg">
+    <img style="display: none" src="images/2/3a.jpg">
+    <img style="display: none" src="images/2/4a.jpg">
+    <img style="display: none" src="images/3/1a.jpg">
+    <img style="display: none" src="images/3/3a.jpg">
+    <img style="display: none" src="images/3/3a.jpg">
+    <img style="display: none" src="images/3/4a.jpg">
+    <img style="display: none" src="images/4/1a.jpg">
+    <img style="display: none" src="images/4/3a.jpg">
+    <img style="display: none" src="images/4/3a.jpg">
+    <img style="display: none" src="images/4/4a.jpg">        
+    <!-- +++++++++++++++++++++++++++ -->      
+
+      <h1>II ТУР</h1>
+
+      <h3>Назовите имя лучшего друга.</h3>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Том Сойер - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse1" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse1">Гекельберри Финн</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Наследник Тутти - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse2" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse2">кукла Суок</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Дениска Кораблев - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse3" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse3">Мишка Слонов</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Серый волк - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse4" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse4">Иван Царевич</h4>
+        </div>
+      </div>
+
+      <h3 class="mt-3">В каких литературных произведениях находятся эти страны?</h3>
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Страна Дальняя - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse5" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse5">«Мио. Мой Мио» А. Линдгрен</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Страна Дураков - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse6" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse6">«Приключения Буратино»</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Страна Лжецов - …</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse7" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse7">«Джельсомино в стране лжецов»</h4>
+        </div>
+      </div>
+
+      <h3 class="mt-3">Продолжите последовательность.</h3>
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Братья, медведи, толстяки…</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse8" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse8">поросята</h4>
+        </div>
+      </div>      
+
+      <h3 class="mt-3">В сказке Дональда Биссета муравей пролез в замочную скважину на дверце буфета и так наелся сахара, что не смог вылезти наружу.</h3>
+      <div class="row mb-5">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>С кем еще произошла подобная история?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse9" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse9">Винни Пух</h4>
+        </div>
+      </div>
+
+      <h1>III ТУР</h1>
+
+      <h3>Прослушайте аудиофайлы и ответьте на вопросы.</h3>
+      
+      <audio style="width:100%" controls preload>
+      <source src="audio/1.mp3" type="audio/mpeg">
+      Тег audio не поддерживается вашим браузером.
+      </audio>      
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>В каком фильме звучит эта песня?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse10" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse10">Приключения Электроника</h4>
+        </div>
+      </div>
+
+      <audio style="width:100%" controls preload>
+      <source src="audio/2.mp3" type="audio/mpeg">
+      Тег audio не поддерживается вашим браузером.
+      </audio>      
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Это "Песня водяного" из мультфильма, по мотивам одноимённой русской народной сказки. Что это за мультфильм и сказка?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse11" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse11">Летучий корабль</h4>
+        </div>
+      </div>
+
+      <audio style="width:100%" controls preload>
+      <source src="audio/3.mp3" type="audio/mpeg">
+      Тег audio не поддерживается вашим браузером.
+      </audio>      
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Это песня "Леди Мэри". Назовите о ком поется в песне.</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse12" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse12">Мэри Поппинс</h4>
+        </div>
+      </div>
+
+      <audio style="width:100%" controls preload>
+      <source src="audio/4.mp3" type="audio/mpeg">
+      Тег audio не поддерживается вашим браузером.
+      </audio>      
+      <div class="row mb-5">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Это реверс песни из одного известного детского кинофильма. Назовите фильм.</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse13" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse13">Приключения Буратино</h4>
+        </div>
+      </div>
+
+      <h1>IV ТУР</h1>
+      <h3>Блиц</h3>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Чем подавился петушок?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse14" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse14">Бобовое зернышко</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Что продавал Дуремар?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse15" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse15">пиявки</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Этого писателя и поэта зовут Самуил, а фамилия его…</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse15-2" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse15-2">Маршак</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>«Личный транспорт» Емели?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse16" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse16">печь</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>В каких птиц превратились 11 королевских сыновей?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse17" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse17">лебеди</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Единственное известное нам имя героини сказки «Репка»?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse18" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse18">Жучка</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Самый нужный подарок на день рождения для Иа-Иа?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse19" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse19">хвост</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Местонахождение кота ученого?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse20" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse20">дуб зеленый</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>В нем 38 попугаев, 6 мартышек и 1 слоненок. Кто это?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse21" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse21">удав</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-5" style="text-align: right">
+        <h4>Какие цветы разыскивала падчерица в лесу зимой?</h4>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+          <button data-toggle="collapse" data-target="#collapse22" type="button" class="btn btn-primary mb-1">Посмотреть ответ</button>
+        </div>
+
+        <div class="col-sm-5" style="text-align: left">
+        <h4 class="collapse" id="collapse22">подснежники</h4>
+        </div>
+      </div>                                    
+
+
+
+                                           
+
+
+    <h6 class="text-center my-5">Качканарская городская библиотека им. Ф. Т. Селянина<br>© 2021</h6>      
+    </div>    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="index.js">
+	</script>
+
+  </body>
+</html>
+
+
